@@ -129,7 +129,6 @@ CLR = dict(LIGHT)
 
 # 时长选项
 DURATION_OPTIONS = [
-    ("3秒（测试）",  "3"),
     ("5 分钟",       "5"),
     ("10 分钟",      "10"),
     ("15 分钟",      "15"),
@@ -460,7 +459,7 @@ class MainWindow(tk.Tk):
     def _on_duration_select(self, key: str):
         self._duration_key = key
         label_map = {k: t for t, k in DURATION_OPTIONS}
-        trigger_text = label_map.get(key, "25 分钟").replace("（测试）", "") + " ▾"
+        trigger_text = label_map.get(key, "25 分钟") + " ▾"
         self._dur_trigger.configure(text=trigger_text)
         self._close_dropdown()
         if self._controller:

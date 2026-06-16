@@ -19,7 +19,6 @@ class TimerState(Enum):
 
 
 DURATION_OPTIONS = {
-    "3":  3,
     "5":  5 * 60,
     "10": 10 * 60,
     "15": 15 * 60,
